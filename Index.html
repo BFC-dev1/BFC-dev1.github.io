@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BellavistaFC</title>
+
+    <!-- Conecta el CSS -->
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+
+   <div class="izquierda">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <div class="logo">
+        <img src="img/Logo1.png" alt="Logo">
+    </div>
+</div>
+
+ <!-- MENÚ DESPLEGABLE -->
+    <div class="menu-desplegable" id="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Calendario</a>
+        <a href="#">Equipos</a>
+        <a href="#">Inscripciones</a>
+        <a href="#">Contacto</a>
+    </div>
+
+
+<div class="nav">
+    <div class="links">
+        <a href="#">Quienes somos</a>
+        <a href="#">Inscripciones</a>
+        <a href="#">Contactos</a>
+    </div>
+
+    <div class="derecha">
+        <a href="#">Iniciar sesión</a>
+    </div>
+</div>
+
+    </header>
+
+    <!-- ===== SECCIÓN PRINCIPAL ===== -->
+    <section class="principal">
+
+        <!-- Imagen principal -->
+        <div class="imagen-central">
+            <img src="img/img1.png" alt="Image1">
+        </div>
+
+        <!-- Texto al lado derecho -->
+        <div class="texto-lateral">
+            <p>Entrenamientos enfocados en el desarrollo técnico</p>
+        </div>
+
+    </section>
+
+    <!-- ===== TARJETAS (3 bloques) ===== -->
+<section class="tarjetas">
+
+    <div class="card">
+        <img src="img/img2.png">
+        <div class="overlay">
+            <p>Trabajo de control y pase</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/img3.png">
+        <div class="overlay">
+            <p>Trabajo en equipo</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/img4.png">
+        <div class="overlay">
+            <p>Coordinación y técnica</p>
+        </div>
+    </div>
+
+</section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        © 2026 Bellavista FC. Todos los derechos reservados. Club de fútbol dedicado a la formación deportiva. La participación implica la aceptación de normas internas. No nos hacemos responsables por accidentes durante las actividades. Información sujeta a cambios.
+    </footer>
+
+</body>
+</html>
+
+</footer>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("activo");
+}
+
+document.addEventListener("click", function(e) {
+    const menu = document.getElementById("menu");
+    const icon = document.querySelector(".menu-icon");
+
+    if (!menu.contains(e.target) && !icon.contains(e.target)) {
+        menu.classList.remove("activo");
+    }
+});
+</script>
+
+</body>
+</html>
