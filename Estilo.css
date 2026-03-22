@@ -302,3 +302,78 @@ body {
 
 }
 }
+
+
+/* ===== QUIENES SOMOS - EFECTOS ===== */
+
+.contenido {
+    padding: 100px 20px 40px;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* título */
+.contenido h1 {
+    margin-bottom: 20px;
+    color: #0A4FA3;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.contenido h1:hover {
+    transform: scale(1.05);
+}
+
+/* subtítulos */
+.contenido h2 {
+    margin-top: 25px;
+    color: #0A4FA3;
+    transition: 0.3s;
+}
+
+.contenido h2:hover {
+    transform: translateX(5px);
+}
+
+/* párrafos */
+.contenido p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* efecto hover */
+.contenido p:hover {
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* bloques tipo tarjeta */
+.bloque {
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.bloque:hover {
+    background: #f0f4ff;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.1);
+}
+
+/* animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
