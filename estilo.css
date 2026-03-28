@@ -325,13 +325,7 @@ body {
 
 .card-contacto {
         width: 90%;
-        padding: 20px;
-    }
-
-    .banner-contacto {
-        font-size: 24px;
-        padding-left: 20px;
-        height: 150px;
+        padding: 200px;
     }
 
     .card {
@@ -345,12 +339,12 @@ body {
 .banner-contacto {
     height: 200px;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url("img/img1.png") center/cover no-repeat;
+    url("img/img1.png") center/cover no-repeat;
     display: flex;
     align-items: center;
     padding-left: 50px;
     color: var(--blanco);
-    font-size: 32px;
+    font-size: 15px;
     font-weight: bold;
 }
 
