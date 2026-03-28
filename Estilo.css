@@ -6,6 +6,14 @@ css
     box-sizing: border-box;
 }
 
+:root {
+    --azul: #0A4FA3;
+    --blanco: #ffffff;
+    --gris-fondo: #f5f5f5;
+    --gris-texto: #444;
+    --transicion: 0.3s;
+}
+
 html, body {
     background: #f5f5f5;
     padding-top: 60px; /*  evita que el header tape contenido */
@@ -34,8 +42,8 @@ body {
     left: 0;    
     right: 0; /* asegura que no se pase del ancho */     
     width: 100%;   
-    height: 60px; /* altura fija elegante */  
-    z-index: 1000; 
+    height: 60px; /* altura fija elegante */ 
+    z-index: 10000; 
 }
 
 .izquierda {
@@ -306,80 +314,61 @@ body {
 }
 
 
-/* ===== QUIENES SOMOS - EFECTOS ===== */
+/* ===== CONTACTO ===== */
 
-.contenido {
-    padding: 20px;
-    background: white;
-    max-width: 900px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
-    animation: fadeIn 0.8s ease-in-out;
-    color: #333;
-    text-shadow: none;
-}
-
-/* título */
-.contenido h1 {
-    margin-bottom: 20px;
-    color: #0e0601;
-    text-align: center;
+.banner-contacto {
+    height: 200px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("img/img1.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    color: var(--blanco);
     font-size: 32px;
+    font-weight: bold;
+}
+
+.contenedor-contacto {
+    background: var(--gris-fondo);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* REUTILIZAS TODO */
+.card-contacto {
     transition: 0.3s;
-    text-shadow: 0px 4px 15px rgba(0,0,0,0.9);
+    width: 600px;
+    padding: 40px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
 }
 
-.contenido h1:hover {
-    transform: scale(1.05);
+/* reutiliza estilos existentes */
+.card-contacto h2 {
+    color: var(--azul);
+    margin-bottom: 20px;
 }
 
-/* subtítulos */
-.contenido h2 {
-    margin-top: 25px;
-    color: #110a05;
-    transition: 0.3s;
-    text-shadow: 0px 3px 10px rgba(0,0,0,0.8);
-}
-
-.contenido h2:hover {
-    transform: translateX(5px);
-}
-
-/* párrafos */
-.contenido p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-    color: #444;
-    transition: 0.3s;
-}
-
-.contenido p:hover {
-    color: #333; /* color o uno más oscuro */
-    transform: translateY(-3px);
-    text-shadow: 0px 2px 5px rgba(0,0,0,0.3);
-}
-
-/* bloques tipo tarjeta */
-.bloque {
-    padding: 15px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.bloque:hover {
+.card-contacto:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
 }
 
-/* animación */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.info-contacto p {
+    color: var(--gris-texto);
+    transition: var(--transicion);
+}
+
+.info-contacto p:hover {
+    transform: translateX(5px);
+    color: var(--azul);
+}
+
+.redes {
+    background: var(--azul);
+    color: var(--blanco);
+    text-align: center;
+    padding: 25px;
 }

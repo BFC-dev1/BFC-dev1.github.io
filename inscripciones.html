@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - BellavistaFC</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER (igual al index) ===== -->
+<header class="header">
+
+    <div class="izquierda">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/Logo1.png" alt="Logo">
+            </a>
+        </div>
+    </div>
+
+    <div class="menu-desplegable" id="menu">
+        <a href="#">Competencias</a>
+        <a href="#">Grupo Técnico</a>
+        <a href="inscripciones.html">Inscripciones</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div class="nav">
+        <div class="links">
+            <a href="quienes_somos.html">Quienes somos</a>
+            <a href="inscripciones.html">Inscripciones</a>
+            <a href="contacto.html">Contactos</a>
+        </div>
+
+        <div class="derecha">
+            <a href="#">Iniciar sesión</a>
+        </div>
+    </div>
+
+</header>
+
+<!-- ===== BANNER SUPERIOR ===== -->
+<section class="banner-contacto">
+    <h1>INSCRIPCIONES</h1>
+</section>
+
+<!-- ===== FORMULARIO ===== -->
+<section class="contenedor-contacto">
+    <div class="card-contacto">
+
+        <h2>Formulario de Inscripción</h2>
+
+        <form class="formulario">
+
+            <input type="text" placeholder="Nombre completo" required>
+
+            <input type="number" placeholder="Edad" required>
+
+            <select required>
+                <option value="">Seleccione deporte</option>
+                <option>Fútbol</option>
+                <option>Baloncesto</option>
+                <option>Natación</option>
+                <option>Voleibol</option>
+            </select>
+
+            <input type="text" placeholder="Categoría (Ej: Sub-15)" required>
+
+            <input type="tel" placeholder="Teléfono" required>
+
+            <input type="email" placeholder="Correo electrónico" required>
+
+            <textarea placeholder="Observaciones"></textarea>
+
+            <button type="submit">Inscribirse</button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- ===== REDES ===== -->
+<section class="redes">
+    <p>SÍGUENOS:</p>
+    <div class="iconos">
+        <span>📸</span>
+        <span>📘</span>
+        <span>▶</span>
+        <span>𝕏</span>
+        <span>🎵</span>
+        <span>in</span>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <p>© 2026 Escuela Deportiva</p>
+</footer>
+
+</body>
+</html>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("activo");
+}
+
+document.addEventListener("click", function(e) {
+    const menu = document.getElementById("menu");
+    const icon = document.querySelector(".menu-icon");
+
+    if (!menu.contains(e.target) && !icon.contains(e.target)) {
+        menu.classList.remove("activo");
+    }
+});
+</script>
